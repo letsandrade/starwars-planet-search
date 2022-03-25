@@ -10,10 +10,12 @@ function Table() {
 
   const tableHeaders = removeResidents[0];
   const residentsIndex = 9;
+
   // tentei usar o .entries mas deu muito errado pra resgatar as infos necessarias depois
   /* const planetInfoArr = returnedPlanets.map((item) => Object.entries(item));
   planetInfoArr.map((item) => item.splice(residentsIndex, 1));
   // console.log(planetInfoArr); */
+
   // referencia do splice: https://love2dev.com/blog/javascript-remove-from-array/
   const planetInfo = returnedPlanets.map((item2) => Object.values(item2));
   planetInfo.map((item3) => item3.splice(residentsIndex, 1));
