@@ -15,8 +15,7 @@ function Table() {
 
   // tentei usar o .entries mas deu muito errado pra resgatar as infos necessarias depois
   /* const planetInfoArr = returnedPlanets.map((item) => Object.entries(item));
-  planetInfoArr.map((item) => item.splice(residentsIndex, 1));
-  // console.log(planetInfoArr); */
+  planetInfoArr.map((item) => item.splice(residentsIndex, 1)); */
 
   // referencia do splice: https://love2dev.com/blog/javascript-remove-from-array/
   const planetInfo = returnedPlanets.map((item2) => Object.values(item2));
@@ -40,13 +39,6 @@ function Table() {
             ))}
           </tr>
         </thead>
-        {/* <tbody>
-          {planetInfo.map((planet) => (
-            <tr key={ planet[0] }>
-              {planet.map((cat) => (<td key={ cat }>{cat}</td>))}
-            </tr>
-          ))}
-        </tbody> */}
         <tbody>
           {planetInfo.filter((item) => item[0].toLowerCase()
             .includes(returnedContext.nameFilter))
