@@ -3,7 +3,9 @@ import Context from '../context/Context';
 import './Table.css';
 
 function Table() {
-  const returnedPlanets = useContext(Context);
+  const returnedContext = useContext(Context);
+  // console.log('returnedContext @ Table', returnedContext);
+  const returnedPlanets = returnedContext.data;
 
   const removeResidents = returnedPlanets
     .map((planet) => Object.keys(planet).filter((item) => item !== 'residents'));
@@ -27,6 +29,7 @@ function Table() {
   }
   return (
     <div>
+      <h2>Star Wars Planet Search</h2>
       <table>
         <thead>
           <tr>
@@ -37,12 +40,21 @@ function Table() {
             ))}
           </tr>
         </thead>
-        <tbody>
+        {/* <tbody>
           {planetInfo.map((planet) => (
             <tr key={ planet[0] }>
               {planet.map((cat) => (<td key={ cat }>{cat}</td>))}
             </tr>
           ))}
+        </tbody> */}
+        <tbody>
+          {planetInfo.filter((item) => item[0].toLowerCase()
+            .includes(returnedContext.nameFilter))
+            .map((planet) => (
+              <tr key={ planet[0] }>
+                {planet.map((cat) => (<td key={ cat }>{cat}</td>))}
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

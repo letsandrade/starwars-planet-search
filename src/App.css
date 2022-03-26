@@ -1,3 +1,11 @@
+body {
+  background-color: rgb(14, 18, 27)
+}
+
+h3 {
+  color: azure;
+}
+
 .App {
   text-align: center;
 }
