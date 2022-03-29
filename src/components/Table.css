@@ -1,8 +1,8 @@
-table, th, td {
-  border: 1px solid rgb(139, 127, 153);
+th, td {
   text-align: center;
   color: rgb(205, 194, 218);
   background-color: rgb(13, 12, 17);
+  box-shadow: 2px 2px black;
 }
 
 h2 {

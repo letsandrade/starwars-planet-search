@@ -6,6 +6,7 @@ import fetchAPI from '../services/fetchAPI';
 function Provider({ children }) {
   const [data, setData] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
+  const [filterByNumbers, setFilterByNumbers] = useState([]);
 
   useEffect(() => {
     const apiResult = async () => {
@@ -19,6 +20,8 @@ function Provider({ children }) {
     data,
     nameFilter,
     setNameFilter,
+    filterByNumbers,
+    setFilterByNumbers,
   };
   // console.log('context', context);
   return (
