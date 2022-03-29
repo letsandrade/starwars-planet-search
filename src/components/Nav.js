@@ -14,13 +14,18 @@ function Nav() {
     value: 0,
   });
 
-  const optionArr = [
+  const initialOptions = [
     'population',
     'orbital_period',
     'diameter',
     'rotation_period',
     'surface_water',
   ];
+
+  // acho que aqui tbm daria certo fazer um reduce, se houver tempo, refatorar.
+  const optionArr = initialOptions
+    .filter((elem) => filterByNumbers
+      .every((entry) => elem !== entry.column));
 
   const handleChange = ({ target }) => {
     setNumberFilters({
