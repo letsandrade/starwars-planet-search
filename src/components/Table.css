@@ -1,8 +1,8 @@
 th, td {
   background-color: rgb(13, 12, 17);
+  box-shadow: 2px 2px black;
   color: rgb(205, 194, 218);
   text-align: center;
-  box-shadow: 2px 2px black;
 }
 
 h2 {
