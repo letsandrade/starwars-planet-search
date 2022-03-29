@@ -1,11 +1,11 @@
 th, td {
-  text-align: center;
-  color: rgb(205, 194, 218);
   background-color: rgb(13, 12, 17);
+  color: rgb(205, 194, 218);
+  text-align: center;
   box-shadow: 2px 2px black;
 }
 
 h2 {
-  text-align: center;
   color: rgb(184, 178, 190);
+  text-align: center;
 }

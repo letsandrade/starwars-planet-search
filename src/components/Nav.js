@@ -22,6 +22,7 @@ function Nav() {
     'surface_water',
   ];
 
+  // aqui tentei só com o filter, mas como ele retorna true ou false, precisei colocar o every dentro
   // acho que aqui tbm daria certo fazer um reduce, se houver tempo, refatorar.
   const optionArr = initialOptions
     .filter((elem) => filterByNumbers
